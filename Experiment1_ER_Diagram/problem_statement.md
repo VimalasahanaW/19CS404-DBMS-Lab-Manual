@@ -31,7 +31,7 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 |--------|--------------------|----------|
 | User   |user_id (PK), name, |Identifies|
 |        | mobile_no, address | the user.|                         
-|        |                    |       |
+|        |                    |          |
 |        |                    |       |
 |        |                    |       |
 |        |                    |       |
