@@ -41,8 +41,9 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
 |User - Permission|1:N|Mandatory (A user must have at least one permission) | A user can have multiple permissions.|     
-|               |       |                    |       |
-|              |            |               |       |
+| User - Trainer| N:M|Optional (User may or may not be a trainer)| A user can manage many trainers and vice versa.|
+| Trainer - Fitness|1:N|Mandatory (A trainer must be associated with at least one fitness type)|Trainers manage fitness types.|
+|Member - Fitness|N:M|Optional (Members may or may not be associated with a fitness type)|A member can be associated with multiple fitness types.|
 
 ### Assumptions
 - 
