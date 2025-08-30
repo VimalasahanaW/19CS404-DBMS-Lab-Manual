@@ -46,9 +46,9 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 |Member - Fitness|N:M|Optional (Members may or may not be associated with a fitness type)|A member can be associated with multiple fitness types.|
 
 ### Assumptions
-- 
-- 
-- 
+- Role-Based Access: Users have different roles (e.g., admin, trainer, member), with permissions assigned based on their role.
+- Trainer-Managed Programs: Trainers manage fitness programs, and members can join multiple fitness types, each guided by a trainer.
+- Flexible Member Participation: Members can participate in multiple fitness programs, with flexibility in the types and number of programs they join.
 
 ---
 
