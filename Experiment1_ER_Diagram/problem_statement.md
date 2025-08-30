@@ -30,7 +30,7 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 | Entity | Attributes (PK, FK) | Notes   |
 |--------|--------------------|----------|
 | User   |user_id (PK), name, |Identifies|
-         | mobile_no, address | the user.|                         
+|        | mobile_no, address | the user.|                         
 |        |                    |       |
 |        |                    |       |
 |        |                    |       |
