@@ -83,14 +83,14 @@ The Central Library wants to manage book lending and cultural events.
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
+|Member - Loan|1:N|Mandatory (A member must have at least one loan)|A member can loan multiple books, but a loan belongs to one member.|
+|Book - Loan|1:N|Mandatory (A book must be loaned to at least one member)|A book can be loaned to multiple members over time, but a loan record is for one book.|
+|Member - Event|M:N|Optional (A member may or may not register for an event)|Members can register for many events, and each event can have many members.|
+|Speaker - Event|M:N|Optional (An event may or may not have a speaker)|An event can have multiple speakers, and a speaker can be assigned to multiple events.|
 ### Assumptions
-- 
-- 
-- 
+- Member-Book Loan System: A Member can borrow multiple Books with a Loan representing each borrowing transaction, which includes the loan and return dates.
+- Event Participation: Members can register for multiple Events, and each Event can have multiple Members attending, with optional speakers.
+- Speaker-Event Association: Events may feature one or more Speakers, and a Speaker can be involved in multiple Events.
 
 ---
 
