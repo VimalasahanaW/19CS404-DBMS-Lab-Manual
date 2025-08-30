@@ -40,8 +40,8 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
+|User - Permission|1:N|Mandatory (A user must have at least one permission) | A user can have multiple permissions.|     
+|               |       |                    |       |
 |              |            |               |       |
 
 ### Assumptions
