@@ -108,31 +108,31 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Waiters assigned to serve reservations.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+<img width="1009" height="603" alt="image" src="https://github.com/user-attachments/assets/08929740-8551-46a1-a958-06f0d74551b3" />
+
 
 ### Entities and Attributes
 
 | Entity | Attributes (PK, FK) | Notes |
 |--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+|CHEF        | Chef_id (PK), Chef_name, Chef_salary                   | Each chef is uniquely identified by Chef_id. Prepares meals.      |
+|MEAL        | meal_name (PK), meal_price                   | A meal is prepared by chefs, ordered by customers, and consists of ingredients.      |
+| INGREDIENTS       | ing_name (PK), description                   |  Each ingredient has a unique name and is linked to meals.     |
+| CUSTOMERS       | cust_phone (PK), cust_name, cust_address                   |  Customers place orders for meals.     |
+| SUPPLIER       |  S_id (PK), S_name, S_city                  | Suppliers attend to customers.      |
 
 ### Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
+|prepares (CHEF–MEAL)              | 1:N           | CHEF (total), MEAL (partial)|One chef can prepare many meals, but a meal is prepared by one chef.|
+| orders (CUSTOMERS–MEAL)             | M:N           | Both partial| A customer can order many meals, and a meal can be ordered by many customers|
+|  consists of (MEAL–INGREDIENTS)| M:N | Both total|Each meal consists of multiple ingredients, and each ingredient can be part of many meals.       |
+| attends (SUPPLIER–CUSTOMERS)          |M:N   |Both partial|A supplier can attend to many customers, and a customer can be attended by many suppliers.
 ### Assumptions
-- 
-- 
-- 
+- Each chef can prepare multiple meals, but a meal is prepared by only one chef.
+- A customer can place multiple orders, and each order may include one or more meals. 
+- Each meal consists of one or more ingredients, and an ingredient may be used in multiple meals.
 
 ---
 
