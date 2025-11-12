@@ -76,12 +76,15 @@ where supplier_id = 5;
 -- Paste Question 2 here
 
 ```sql
--- Paste your SQL code below for Question 2
+update Products
+set category = 'Household'
+where product_name like '%Detergent%';
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1797" height="400" alt="image" src="https://github.com/user-attachments/assets/7f49910c-e11a-40b2-a5a4-2ebe8677f8dd" />
+
 
 **Question 3**
 ---
