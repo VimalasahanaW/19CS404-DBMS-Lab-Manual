@@ -73,8 +73,20 @@ where supplier_id = 5;
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL statement to Change the category to 'Household' where product name contains 'Detergent' in the products table.
 
+## Products Table :
+
+|name      |    type  |     
+|----------|   --------|
+|product_id   |  INT PRIMARY KEY |       
+|product_name |  VARCHAR(10) |
+|category   |    VARCHAR(50) |
+|cost_price  |   DECIMAL(10) |
+|sell_price   |  DECIMAL(10) |
+|reorder_lvl  |  INT   |     
+|quantity     |  INT   |     
+|supplier_id   | INT  |        
 ```sql
 update Products
 set category = 'Household'
