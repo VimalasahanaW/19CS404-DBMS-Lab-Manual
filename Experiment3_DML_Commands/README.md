@@ -196,20 +196,12 @@ where GRADE >= 2;
 ---
 Write a SQL query to locate the details of customers with grade values above 100. Return customer_id, cust_name, city, grade, and salesman_id.
 
-## Sample table: customer
 
- |customer_id |cust_name|city|grade|salesman_id|
-
- |------------|---------|----|------|----------|
-
-   |     3002 | Nick Rimando   | New York   |   100 |        5001|
-
-   |     3007 | Brad Davis     | New York   |   200 |        5001|
-
-    |    3005 | Graham Zusi    | California |   200 |        5002|
 
 ```sql
--- Paste your SQL code below for Question 8
+select customer_id, cust_name, city, grade,salesman_id
+from customer
+where grade > 100;
 ```
 
 **Output:**
@@ -219,27 +211,41 @@ Write a SQL query to locate the details of customers with grade values above 100
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write a SQL query to Select all patients who were admitted during the year 2023.
 
 ```sql
--- Paste your SQL code below for Question 9
+select patient_id , first_name , admission_date
+from Patients
+where admission_date BETWEEN '2023-01-01' AND '2023-12-31';
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="997" height="443" alt="image" src="https://github.com/user-attachments/assets/3af6cc75-c149-4d84-9a03-e8976296ebd8" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+write a SQL query to create a union of two queries that shows the customer id, cities, and ratings of all customers. Those with a rating of 300 or greater will have the words 'High Rating', while the others will have the words 'Low Rating'.
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT customer_id,city,grade,'High Rating'
+as Rating
+from customer
+where grade >= 300
+
+union
+
+SELECT customer_id,city,grade,'Low Rating'
+as Rating
+from customer
+where grade < 300;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1078" height="545" alt="image" src="https://github.com/user-attachments/assets/73dd5590-2b4b-4243-be49-289616437f51" />
+
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
