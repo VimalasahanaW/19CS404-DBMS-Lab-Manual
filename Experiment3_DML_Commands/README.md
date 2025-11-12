@@ -52,13 +52,13 @@ Write a SQL statement to Update the address to '58 Lakeview, Magnolia' where sup
 Suppliers Table 
 
 |name     |          type|
------------------  ---------------
-supplier_id        INT
-supplier_name      VARCHAR(100)
-contact_person     VARCHAR(100)
-phone_number       VARCHAR(20)
-email              VARCHAR(100)
-address            VARCHAR(250)
+|---------|  -------------|
+|supplier_id |       INT|
+|supplier_name  |    VARCHAR(100)|
+|contact_person |    VARCHAR(100)|
+|phone_number   |    VARCHAR(20)|
+|email    |          VARCHAR(100)|
+|address   |         VARCHAR(250)|
 
 ```sql
 update Suppliers
