@@ -144,43 +144,69 @@ set email = 'Unavailable';
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to Delete All Doctors with a NULL Last Name
+
+Sample table: Doctors
+
+attributes : doctor_id, first_name, last_name, specialization
 
 ```sql
--- Paste your SQL code below for Question 5
+delete from Doctors
+where  last_name is NULL;
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1429" height="700" alt="image" src="https://github.com/user-attachments/assets/86a76ebd-290c-4426-bff2-67e5ef67ca5c" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to delete a specific doctor from Doctors table whose ID is 1.
+
+Sample table: Doctors
+
+attributes : doctor_id, first_name, last_name, specialization
 
 ```sql
--- Paste your SQL code below for Question 6
+delete from Doctors
+where doctor_id = 1;
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1142" height="298" alt="image" src="https://github.com/user-attachments/assets/022d4f9f-607f-40aa-bb69-3a1223dfce70" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is greater than or equal to 2.
 
 ```sql
--- Paste your SQL code below for Question 7
+delete from Customer
+where GRADE >= 2;
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="651" height="566" alt="image" src="https://github.com/user-attachments/assets/d681249a-891a-4175-af41-3c603bd93ba9" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+Write a SQL query to locate the details of customers with grade values above 100. Return customer_id, cust_name, city, grade, and salesman_id.
+
+## Sample table: customer
+
+ |customer_id |cust_name|city|grade|salesman_id|
+
+ |------------|---------|----|------|----------|
+
+   |     3002 | Nick Rimando   | New York   |   100 |        5001|
+
+   |     3007 | Brad Davis     | New York   |   200 |        5001|
+
+    |    3005 | Graham Zusi    | California |   200 |        5002|
 
 ```sql
 -- Paste your SQL code below for Question 8
@@ -188,7 +214,8 @@ set email = 'Unavailable';
 
 **Output:**
 
-![Output8](output.png)
+<img width="1378" height="520" alt="image" src="https://github.com/user-attachments/assets/5cb87d7b-6890-4571-ab3f-bd5072091cf3" />
+
 
 **Question 9**
 ---
