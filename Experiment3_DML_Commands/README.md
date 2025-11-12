@@ -47,15 +47,29 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL statement to Update the address to '58 Lakeview, Magnolia' where supplier ID is 5 in the suppliers table.
+
+Suppliers Table 
+
+name               type
+-----------------  ---------------
+supplier_id        INT
+supplier_name      VARCHAR(100)
+contact_person     VARCHAR(100)
+phone_number       VARCHAR(20)
+email              VARCHAR(100)
+address            VARCHAR(250)
 
 ```sql
--- Paste your SQL code below for Question 1
+update Suppliers
+set address = '58 Lakeview, Magnolia'
+where supplier_id = 5;
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1853" height="334" alt="image" src="https://github.com/user-attachments/assets/0e618207-1345-4e82-bbbf-88f53976b1a9" />
+
 
 **Question 2**
 ---
