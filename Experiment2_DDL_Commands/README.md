@@ -289,22 +289,23 @@ FROM Former_employees;
 
 **Question 10**
 ---
-Create a table named Locations with the following columns:
+Insert the following products into the Products table:
 
-LocationID as INTEGER
-LocationName as TEXT
-Address as TEXT
+Name        Category     Price       Stock
+----------  -----------  ----------  ----------
+Smartphone  Electronics  800         150
+Headphones  Accessories  200         300
 
 ```sql
-CREATE TABLE Locations(
-LocationID INTEGER,
-LocationName TEXT,
-Address TEXT);
+INSERT INTO  Products(Name,Category,Price,Stock)
+values('Smartphone','Electronics',800,150),
+('Headphones','Accessories',200,300);
 ```
 
 **Output:**
 
-<img width="1918" height="1017" alt="Screenshot 2025-11-10 223156" src="https://github.com/user-attachments/assets/f37c2f8e-ade0-4939-be0a-1649586cd4af" />
+<img width="1290" height="355" alt="image" src="https://github.com/user-attachments/assets/64482466-6039-40c8-832b-b922275d0ea4" />
+
 
 
 
