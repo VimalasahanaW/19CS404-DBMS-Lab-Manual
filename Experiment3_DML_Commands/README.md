@@ -100,27 +100,47 @@ where product_name like '%Detergent%';
 
 **Question 3**
 ---
--- Paste Question 3 here
+Write a SQL statement to Increase the selling price per unit by 5% for product ID 15 who's sale is on '2023-01-31'.
 
+sales(sale_id,sale_date,product_id,quantity,sell_price,total_sell_price)
 ```sql
--- Paste your SQL code below for Question 3
+update sales
+set sell_price = sell_price * 1.05
+where product_id = 15 and sale_date = '2023-01-31';
+
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1746" height="465" alt="image" src="https://github.com/user-attachments/assets/67bcc16d-1702-4a37-940f-0b82e6f9dcbb" />
 
 **Question 4**
 ---
--- Paste Question 4 here
+Write a SQL statement to change the email column of employees table with 'Unavailable' for all employees in employees table.
 
+Employees table
+
+---------------
+employee_id
+first_name
+last_name
+email
+phone_number
+hire_date
+job_id
+salary
+commission_pct
+manager_id
+department_id
 ```sql
--- Paste your SQL code below for Question 4
+update Employees
+set email = 'Unavailable';
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="1355" height="459" alt="image" src="https://github.com/user-attachments/assets/2c508718-81eb-44e5-997f-16a5bb05bf9c" />
+
 
 **Question 5**
 ---
