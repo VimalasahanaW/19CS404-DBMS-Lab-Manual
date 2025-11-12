@@ -51,7 +51,7 @@ Write a SQL statement to Update the address to '58 Lakeview, Magnolia' where sup
 
 Suppliers Table 
 
-name               type
+|name     |          type|
 -----------------  ---------------
 supplier_id        INT
 supplier_name      VARCHAR(100)
