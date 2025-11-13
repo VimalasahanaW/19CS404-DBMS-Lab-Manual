@@ -59,9 +59,32 @@ Key Differences:
 - Inside the procedure, compute the square of the input number.
 - Use `DBMS_OUTPUT.PUT_LINE` to display the result.
 - Call the procedure with a number as input.
+## PROGRAM
+```
+SET SERVEROUTPUT ON;
 
+CREATE OR REPLACE PROCEDURE find_square (num IN NUMBER)
+IS
+    square_result NUMBER;
+BEGIN
+    -- Compute square
+    square_result := num * num;
+    
+    -- Display the result
+    DBMS_OUTPUT.PUT_LINE('Square of ' || num || ' is ' || square_result);
+END;
+/
+```
+```
+BEGIN
+    find_square(6);
+END;
+/
+```
 **Expected Output:**  
 Square of 6 is 36
+## OUTPUT:
+<img width="1009" height="665" alt="image" src="https://github.com/user-attachments/assets/43d23276-1a28-4eda-967b-a3b56864d613" />
 
 ---
 
@@ -73,9 +96,40 @@ Square of 6 is 36
 - Use a loop to calculate the factorial.
 - Return the result using the `RETURN` statement.
 - Call the function using a `SELECT` statement or in an anonymous block.
+## PROGRAM:
+```
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE FUNCTION get_factorial(n IN NUMBER)
+RETURN NUMBER
+IS
+    fact NUMBER := 1;
+BEGIN
+    IF n < 0 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Factorial is not defined for negative numbers.');
+    END IF;
+
+    -- Loop to calculate factorial
+    FOR i IN 1..n LOOP
+        fact := fact * i;
+    END LOOP;
+
+    RETURN fact;
+END;
+/
+```
+```
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Factorial of 5 is ' || get_factorial(5));
+END;
+/
+```
 
 **Expected Output:**  
 Factorial of 5 is 120
+## OUTPUT:
+
+<img width="1022" height="666" alt="image" src="https://github.com/user-attachments/assets/f7ac6c80-12a8-498f-afb6-d1095f605a1f" />
 
 ---
 
@@ -87,8 +141,29 @@ Factorial of 5 is 120
 - Use the `MOD` function to check if the number is divisible by 2.
 - Display whether it is Even or Odd using `DBMS_OUTPUT.PUT_LINE`.
 
+## PROGRAM:
+```
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE check_even_odd(num IN NUMBER)
+IS
+BEGIN
+    IF MOD(num, 2) = 0 THEN
+        DBMS_OUTPUT.PUT_LINE(num || '  is  Even');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(num || '  is  Odd');
+    END IF;
+END;
+/
+BEGIN
+    check_even_odd(12);
+END;
+/
+```
 **Expected Output:**  
 12 is Even
+## OUTPUT:
+<img width="1015" height="644" alt="image" src="https://github.com/user-attachments/assets/1e67b0b5-9283-4f15-981d-d44d4b0c5c29" />
 
 ---
 
@@ -100,9 +175,37 @@ Factorial of 5 is 120
 - Use a loop to reverse the digits of the number.
 - Return the reversed number.
 - Call the function and display the output.
+## PROGRAM:
+```
+SET SERVEROUTPUT ON;
 
+CREATE OR REPLACE FUNCTION reverse_number(n IN NUMBER)
+RETURN NUMBER
+IS
+    original_num NUMBER := n;
+    reversed_num NUMBER := 0;
+    digit NUMBER;
+BEGIN
+    WHILE original_num > 0 LOOP
+        digit := MOD(original_num, 10);          -- Extract last digit
+        reversed_num := reversed_num * 10 + digit;  -- Append digit
+        original_num := TRUNC(original_num / 10);   -- Remove last digit
+    END LOOP;
+
+    RETURN reversed_num;
+END;
+/
+```
+```
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Reversed number of 1234 is ' || reverse_number(1234));
+END;
+/
+```
 **Expected Output:**  
 Reversed number of 1234 is 4321
+## OUTPUT:
+<img width="1022" height="627" alt="image" src="https://github.com/user-attachments/assets/531e0596-8e7c-4aa4-a991-c35a220ddc46" />
 
 ---
 
@@ -114,6 +217,27 @@ Reversed number of 1234 is 4321
 - Use a loop from 1 to 10 to multiply the input number.
 - Display the multiplication results using `DBMS_OUTPUT.PUT_LINE`.
 
+## PROGRAM:
+```
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE print_table(num IN NUMBER)
+IS
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Multiplication table of ' || num || ':');
+    
+    FOR i IN 1..10 LOOP
+        DBMS_OUTPUT.PUT_LINE(num || ' x ' || i || ' = ' || (num * i));
+    END LOOP;
+END;
+/
+```
+```
+BEGIN
+    print_table(5);
+END;
+/
+```
 **Expected Output:**  
 Multiplication table of 5:  
 5 x 1 = 5  
@@ -121,6 +245,8 @@ Multiplication table of 5:
 5 x 3 = 15  
 ...  
 5 x 10 = 50
+## OUTPUT:
+<img width="1014" height="685" alt="image" src="https://github.com/user-attachments/assets/848fcb68-0030-4c33-aaae-b30a4ac583ab" />
 
 ## RESULT
 Thus, the PL/SQL programs using procedures and functions were written, compiled, and executed successfully.
